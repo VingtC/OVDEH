@@ -106,6 +106,9 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
   color: red;
 }
 
+#menu-item-saves {
+	display: none;
+}
 
 body.♥ {
  background-image:url("https://i.ibb.co/c2SSTXd/stable-diffusion-xl-clipdrop-remove-text.png");
@@ -162,7 +165,9 @@ body.psyen {
 #verticalhealthbar {  /* colors for specific vertical bars */
 	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), radial-gradient( circle at bottom right, #c00, #c00 60% );
 }
-/* Vertical Health Bar - End */</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Health Bar code - Start */
+/* Vertical Health Bar - End */</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.history.maxStates = 1;
+
+/* Health Bar code - Start */
 window.Health = function (CurES, MaxES, BarID, Horizontal, Container) {
 	if (Container == undefined) {
 		Container = document;
@@ -285,6 +290,9 @@ De l&#39;autre côté, $nom peut choisir la première technologique, qui privil�
 &lt;&lt;audio &quot;fete&quot; unload&gt;&gt;
 &lt;&lt;audio &quot;sortie&quot; unload&gt;&gt;
 &lt;&lt;audio &quot;culture&quot; unload&gt;&gt;
+&lt;&lt;audio &quot;revision&quot; unload&gt;&gt;
+&lt;&lt;audio &quot;jv&quot; unload&gt;&gt;
+&lt;&lt;cacheaudio &quot;love&quot; &quot;https://audionautix.com/Music/BridesBallad.mp3&quot; &gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="BTS" tags="" position="1800,1775" size="100,100">$nom fait le BTS $BTS[$Interet].
 Le BTS (Brevet de Technicien Supérieur) est une formation de deux ans qui se concentre principalement sur les enseignements professionnels. Cette formation, réputée pour son approche pratique et orientée vers le monde du travail, offre à $nom la possibilité de se plonger directement dans le domaine qui l&#39;intéresse.
 
@@ -361,8 +369,7 @@ Continuer les études
 &lt;&lt;if $CurES &gt;=8&gt;&gt;
 [[Poursuivre les études -&gt;Parcoursup]] 
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;link [[Travailler]]&gt;&gt;&lt;&lt;set $diplome=2&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Bienvenue" tags="" position="2225,775" size="100,100">Bienvenue dans l&#39;Orientation dont vous êtes le héros.
-
+&lt;&lt;link [[Travailler]]&gt;&gt;&lt;&lt;set $diplome=2&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Bienvenue" tags="" position="2225,775" size="100,100">Bienvenue dans l&#39;Orientation dont vous êtes le héros. &lt;&lt;audio &quot;fond&quot; play loop volume 0.25&gt;&gt;
 Avant de commencer l&#39;aventure, choisis le collégien que tu accompagneras tous le long de son parcours.
 
 &lt;center&gt;
@@ -414,7 +421,6 @@ Avant de commencer l&#39;aventure, choisis le collégien que tu accompagneras to
       &lt;/tr&gt; 
   &lt;/table&gt;
 &lt;/center&gt;
-
 &lt;&lt;set $persostat = false&gt;&gt;
 &lt;div style=&quot;text-align: right;&quot;&gt;[[à propos]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="C&#39;est parti !" tags="3e" position="2550,925" size="100,100">&lt;&lt;set $persostat = true&gt;&gt;&lt;&lt;set $passage = &quot;C&#39;est parti !&quot;&gt;&gt;
 Tu va aider  &#39;&#39;$nom&#39;&#39;, &lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt; une &lt;&lt;else&gt;&gt; un &lt;&lt;/if&gt;&gt;élève en 3e, à s&#39;orienter. Tu trouveras les informations  &lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt; la &lt;&lt;else&gt;&gt; le &lt;&lt;/if&gt;&gt; concernant sur la gauche.
@@ -511,7 +517,7 @@ $nom s&#39;est un peu trop amusé&lt;&lt;if $genre == &quot;Fille&quot;&gt;&gt;e
 &lt;&lt;cacheaudio &quot;sortie&quot; &quot;https://audionautix.com/Music/TrippinCoffee.mp3&quot; &gt;&gt;
 &lt;&lt;cacheaudio &quot;revision&quot; &quot;https://audionautix.com/Music/Quiet.mp3&quot; &gt;&gt;
 &lt;&lt;cacheaudio &quot;jv&quot; &quot;https://audionautix.com/Music/Algorithm.mp3&quot; &gt;&gt;
-
+&lt;&lt;audio &quot;fond&quot; play loop volume 0.25&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="13" name="Contrôle surprise" tags="" position="2500,1075" size="100,100">&lt;img src=&quot;https://i.ibb.co/6WDLJzz/stable-diffusion-xl-6-clipdrop-remove-text.png&quot;&gt;
@@ -559,7 +565,7 @@ Quel domaine souhaite étudier $nom dans les études supérieures ?
 &lt;&lt;link [[Social-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 3&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[Commercial-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 4&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[Organisationnel-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 5&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Fete" tags="" position="2125,900" size="100,100">&lt;img src=&quot;https://i.ibb.co/cv9VNRn/stable-diffusion-xl-3-clipdrop-remove-text.jpg&quot;&gt;
-&lt;&lt;audio &quot;fete&quot;play loop&gt;&gt;
+&lt;&lt;audio &quot;fete&quot;play loop&gt;&gt; &lt;&lt;audio &quot;fond&quot; pause&gt;&gt;
 
 Une ambiance survoltée règne en maître. La musique résonne à un volume élevé, créant des vibrations dans l&#39;air et faisant trembler les murs. Les lumières dansent en synchronisation avec les rythmes entraînants, créant un spectacle visuel captivant.
 
@@ -587,12 +593,12 @@ Entreprenant (E) : Les gens qui aiment diriger, persuader, et être ambitieux da
 Conventionnel (C) : Ce sont les personnes organisées qui aiment suivre des règles et des procédures, comme les travailleurs administratifs ou ceux qui gèrent des données.//
 &lt;/span&gt;
 [[Revenir à l&#39;école-&gt;$passage]]</tw-passagedata><tw-passagedata pid="20" name="JV" tags="" position="1850,925" size="100,100">&lt;img src=&quot;https://i.ibb.co/RQJNzbm/stable-diffusion-xl-2-clipdrop-remove-text.jpg&quot;&gt;
-&lt;&lt;audio &quot;jv&quot; play loop&gt;&gt;
+&lt;&lt;audio &quot;jv&quot; play loop&gt;&gt;&lt;&lt;audio &quot;fond&quot; pause&gt;&gt;
 $nom se détend dans sa chambre, plongé&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; dans le monde virtuel des jeux vidéo et des séries. L&#39;atmosphère est agréablement détendue, avec un éclairage tamisé qui crée une ambiance confortable. Devant, l&#39;écran du jeu ou de la série s&#39;anime, l&#39;invitant à explorer des univers imaginaires ou à suivre les intrigues des personnages.
 
-Dans le monde du jeu vidéo, $nom peut être un aventurier intrépide, un stratège habile ou un explorateur curieux, tout en vivant des expériences uniques et en testant ses compétences virtuelles..
+Dans le monde du jeu vidéo, $nom peut être un&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; aventurier&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; intrépide, un&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; stratège habile ou un&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; &lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;exploratrice curieuse&lt;&lt;else&gt;&gt;explorateur curieux&lt;&lt;/if&gt;&gt;, tout en vivant des expériences uniques et en testant ses compétences virtuelles..
 
-Lorsque $noù regarde des séries, $nom se plonge dans des histoires, s&#39;attachant aux personnages et se laissant emporter par les rebondissements. C&#39;est un moment de détente et d&#39;évasion, où le temps semble s&#39;écouler à un rythme différent.
+Lorsque $nom regarde des séries, $nom se plonge dans des histoires, s&#39;attachant aux personnages et se laissant emporter par les rebondissements. C&#39;est un moment de détente et d&#39;évasion, où le temps semble s&#39;écouler à un rythme différent.
 
 &lt;&lt;if $e &lt;3 &gt;&gt; $nom se détends tranquillement devant les écrans et gagne &lt;&lt;print 3-$e&gt;&gt; point d&#39;ES. &lt;&lt;set $CurES +=3-$e&gt;&gt;&lt;&lt;elseif $e &gt;3&gt;&gt; Finalement $nom s&#39;ennuit seul&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;le&lt;&lt;/if&gt;&gt; sans personne avec qui échanger directement et perd &lt;&lt;print $e-3&gt;&gt; point d&#39;ES. &lt;&lt;set $CurES -=$e-3&gt;&gt;&lt;&lt;else&gt;&gt; $nom a passé un bon moment.&lt;&lt;/if&gt;&gt;
 
@@ -752,10 +758,12 @@ Définies ta Personnalité sur un maximum de 15 points
  &lt;&lt;linkreplace &quot;Voir nombres points&quot;&gt;&gt;
  		&lt;&lt;set $ptperso = $o+$c+$e+$a+$n&gt;&gt;
        &lt;&lt;if $ptperso&gt;15&gt;&gt; 
-                &lt;span class=&quot;non&quot;&gt;Nombre de points : $ptperso /15&lt;/span&gt;
+                &lt;span class=&quot;non&quot;&gt;Nombre de points : $ptperso /15
+                Il faut recommencer en limitant à un max de 15 points&lt;/span&gt;
                 &lt;a onclick=&quot;location.reload()&quot; class=&quot;internalLink&quot;&gt;Recommencer&lt;/a&gt;
         &lt;&lt;else&gt;&gt;
-        		&lt;span class=&quot;ok&quot;&gt;Nombre de points : $ptperso /15&lt;/span&gt;
+        		&lt;span class=&quot;ok&quot;&gt;Nombre de points : $ptperso /15
+                Parfait, continuons&lt;/span&gt;
 
 Choisis l&#39;apparence de ton personnage :
 &lt;table&gt;
@@ -774,25 +782,26 @@ Choisis l&#39;apparence de ton personnage :
         &lt;/th&gt;
     &lt;/tr&gt;
 &lt;/table&gt;
-&lt;/center&gt;
-
          &lt;&lt;/if&gt;&gt;
  &lt;&lt;/linkreplace&gt;&gt;
-
+&lt;/center&gt;
 &lt;&lt;set $persostat = false&gt;&gt;   </tw-passagedata><tw-passagedata pid="30" name="Personnalité" tags="psyen" position="3150,1100" size="100,100">&lt;span style=&quot;background:black&quot; &gt;
 Bonjour $nom !
 
-Le modèle des Big Five est une façon de comprendre la personnalité des gens en utilisant cinq grands traits. Imagine que ces traits sont comme les grandes catégories qui décrivent la personnalité de quelqu&#39;un. Les cinq traits sont les suivants :
+La personnalité est un ensemble de dispositions, de traits, stables de l&#39;individus. Si elle évolue dans le temps et se fige vers la vingtaine, elle est globalement ancrée chez les personnes et peut même se voir au niveau du 
+&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3049165/&quot;&gt; 
+//cerveau//&lt;/a&gt; par exemple !
+Le modèle des Big Five est une façon parmi les plus fiables de comprendre la personnalité des gens en utilisant cinq grands traits. Imagine que ces traits sont comme les grandes catégories qui décrivent la personnalité de quelqu&#39;un. Les cinq traits sont les suivants :
 
-1. **L&#39;Extraversion** : Cela concerne si vous êtes une personne plutôt sociable et extravertie, qui aime passer du temps avec les autres, ou si vous êtes plutôt introverti, préférant être seul ou avec un petit groupe d&#39;amis proches.
+1. L&#39;Extraversion : Cela concerne si vous êtes une personne plutôt sociable et extravertie, qui aime passer du temps avec les autres, ou si vous êtes plutôt introverti, préférant être seul ou avec un petit groupe d&#39;amis proches.
 
-2. **L&#39;Amabilité** : Cela mesure à quel point vous êtes gentil, compréhensif et coopératif envers les autres. Si vous êtes une personne amicale et compatissante, vous obtiendrez un score élevé dans cette catégorie.
+2. L&#39;Amabilité : Cela mesure à quel point vous êtes gentil, compréhensif et coopératif envers les autres. Si vous êtes une personne amicale et compatissante, vous obtiendrez un score élevé dans cette catégorie.
 
-3. **La Conscience** : Cela concerne si vous êtes organisé, responsable et que vous faites attention aux détails. Les personnes très consciencieuses sont souvent très sérieuses dans leurs études ou leur travail.
+3. La Conscience : Cela concerne si vous êtes organisé, responsable et que vous faites attention aux détails. Les personnes très consciencieuses sont souvent très sérieuses dans leurs études ou leur travail.
 
-4. **La Stabilité Emotionnelle** : Cela a à voir avec la façon dont vous gérez vos émotions. Les personnes ayant une grande stabilité émotionnelle sont moins susceptibles de se sentir anxieuses ou déprimées.
+4. La Stabilité Emotionnelle : Cela a à voir avec la façon dont vous gérez vos émotions. Les personnes ayant une grande stabilité émotionnelle sont moins susceptibles de se sentir anxieuses ou déprimées.
 
-5. **L&#39;Ouverture à l&#39;Expérience** : Cela mesure à quel point vous êtes curieux et ouvert à de nouvelles idées et expériences. Si vous aimez essayer de nouvelles choses et explorer le monde, vous avez une grande ouverture à l&#39;expérience.
+5. L&#39;Ouverture à l&#39;Expérience : Cela mesure à quel point vous êtes curieux et ouvert à de nouvelles idées et expériences. Si vous aimez essayer de nouvelles choses et explorer le monde, vous avez une grande ouverture à l&#39;expérience.
 
 Il est important de noter que tout le monde a un mélange unique de ces traits. Personne n&#39;est exactement pareil, et c&#39;est ce qui rend les gens intéressants ! Les Big Five nous aident à mieux comprendre pourquoi certaines personnes sont plus extraverties ou consciencieuses que d&#39;autres, par exemple.
 
@@ -836,6 +845,7 @@ Combien d&#39;année d&#39;études minimums veut faire $nom ?
 &lt;/span&gt;
 &lt;&lt;set $nbaide += 1&gt;&gt;
 [[Revenir à l&#39;école-&gt;$passage]]</tw-passagedata><tw-passagedata pid="34" name="Rencontre en stage" tags="♥" position="2825,1350" size="100,100">&lt;span style=&quot;color:pink ; background-color: black&quot; &gt;
+&lt;&lt;audio &quot;love&quot; play loop&gt;&gt;&lt;&lt;audio &quot;fond&quot; pause&gt;&gt;
 Pendant son stage, $nom partage une expérience enrichissante avec un élève d&#39;une autre école. Une connexion spéciale se développe rapidement entre eux, leurs conversations devenant de plus en plus profondes et significatives. Ils découvrent qu&#39;ils sont sur la même longueur d&#39;onde, partageant des intérêts, des valeurs et des perspectives similaires.
 
 À mesure que le temps passe, $nom ressent un sentiment plus profond envers cette personne, un désir qui va au-delà de l&#39;amitié. C&#39;est une sensation complexe, teintée d&#39;excitation, d&#39;incertitude et d&#39;appréhension. Les émotions s&#39;entremêlent alors que $nom réfléchit à la possibilité de transformer cette amitié en quelque chose de plus.
@@ -845,13 +855,13 @@ Les choix de $nom dans cette situation délicate pourraient influencer sa vie fu
 [[L&#39;inviter à sortir]]
 [[L&#39;ignorer et se concentrer sur son parcours-&gt;$passage]]
 &lt;/span&gt;</tw-passagedata><tw-passagedata pid="35" name="Revision" tags="" position="2075,1125" size="100,100">&lt;img src=&quot;https://i.ibb.co/8XLcNQB/stable-diffusion-xl-7-clipdrop-remove-text.jpg&quot;&gt;
-&lt;&lt;audio &quot;revision&quot; play loop&gt;&gt;
+&lt;&lt;audio &quot;revision&quot; play loop&gt;&gt;&lt;&lt;audio &quot;fond&quot; pause&gt;&gt;
 $nom s&#39;installe confortablement dans son espace de travail, prêt&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; à plonger dans la révision, même en l&#39;absence d&#39;évaluation imminente. Les livres, les cahiers et les ressources éducatives s&#39;étalent sur son bureau, créant un environnement propice à la concentration. La lumière tamisée baigne la pièce, créant une atmosphère propice à l&#39;apprentissage.
 
 $nom commence par organiser son matériel, créant une structure claire pour sa session de révision. Les notes s&#39;étalent de manière ordonnée, prêtes à être parcourues. $nom se plonge ensuite dans ses cours, parcourant les chapitres et les concepts clés avec une détermination tranquille. La prise de notes méticuleuse accompagne sa lecture, lui permettant de consigner les informations essentielles.
 
 La concentration est palpable dans la pièce alors que $nom s&#39;immerge dans son travail, ne laissant aucune distraction interférer avec son effort. Chaque détail est important, chaque compréhension acquise est une victoire personnelle. Le temps s&#39;écoule, presque imperceptiblement, alors que $nom s&#39;engage pleinement dans cette session de révision, faisant preuve de discipline et de détermination pour maîtriser le contenu.
-&lt;&lt;if $n&lt;3&gt;&gt; $nom est de nature anxieuse et réviser l&#39;aide à se rassurer. $nom gagne &lt;&lt;print 3-$n&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES +=3-$n&gt;&gt;&lt;&lt;elseif $n &gt;3&gt;&gt; $nom est serein&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; sur son niveau scolaire et ne voit pas l&#39;intérêt de travailler autant, $nom s&#39;ennuit. $nom perd &lt;&lt;print $n-3&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES -=$n-3&gt;&gt;&lt;&lt;else&gt;&gt; $nom a appris ses leçons et maitrisé les excercices.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $n&lt;3 and $c&gt;3&gt;&gt; $nom est de nature anxieuse et réviser l&#39;aide à se rassurer. $nom gagne &lt;&lt;print 3-$n&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES +=3-$n&gt;&gt;&lt;&lt;elseif $n &gt;3 and $c&lt;3&gt;&gt; $nom est serein&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; sur son niveau scolaire et ne voit pas l&#39;intérêt de travailler autant, $nom s&#39;ennuit. $nom perd &lt;&lt;print $n-3&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES -=$n-3&gt;&gt;&lt;&lt;else&gt;&gt; $nom a appris ses leçons et maitrisé les excercices.&lt;&lt;/if&gt;&gt;
 
 [[Revenir à l&#39;école-&gt;$passage]]</tw-passagedata><tw-passagedata pid="36" name="ST2S" tags="Bac" position="2200,1525" size="100,100">&lt;img src=&quot;https://i.ibb.co/ckvpZMY/students-desk-top-down-view-newspapers-microscope-stethoscope-style-Anime-width-1344-height-768-aspe.png&quot; alt=&quot;ST2S&quot; border=&quot;0&quot;&gt;
 $nom a opté pour la filière ST2S, ce qui signifie que son parcours sera centré sur la santé et le social. Cette filière prépare aux professions liées à la santé et aux services sociaux, en fournissant une base solide en biologie, en sciences sociales, en psychologie, et en sociologie. Les élèves sont préparés à travailler dans des domaines tels que les soins infirmiers, l&#39;ergothérapie, le travail social, ou l&#39;enseignement.
@@ -929,7 +939,7 @@ Quel domaine souhaite étudier $nom dans les études supérieures ?
 &lt;&lt;link [[Social-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 3&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[Commercial-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 4&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[Organisationnel-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 5&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Sortir" tags="" position="2000,1000" size="100,100">&lt;img src=&quot;https://i.ibb.co/XZM1tFh/stable-diffusion-xl-5.jpg&quot;&gt;
-&lt;&lt;audio &quot;sortie&quot;play loop&gt;&gt;
+&lt;&lt;audio &quot;sortie&quot;play loop&gt;&gt; &lt;&lt;audio &quot;fond&quot; pause&gt;&gt;
 Aujourd&#39;hui, $nom passe du temps avec ses amis, sillonnant les rues animées de la ville et les paisibles parcs verdoyants. L&#39;occasion parfaite pour des conversations enrichissantes, des échanges d&#39;idées et des moments de détente entre amis. Chacune de ces rencontres offre à $nom la possibilité de renforcer ses liens sociaux et de s&#39;enrichir de nouvelles perspectives.
 &lt;&lt;if $a &gt;=4&gt;&gt; $nom à l&#39;occasion de discuter de manière sereine avec ses amis grace à sa gentillesse. $nom gagne &lt;&lt;print $a-3&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES +=$a-3&gt;&gt;&lt;&lt;elseif $a &lt;=2&gt;&gt; $nom ne se montre pas toujours agréable avec ses amis et leur sortie se terminent en embrouille. $nom perd &lt;&lt;print 3-$a&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES -=3-$a&gt;&gt;&lt;&lt;else&gt;&gt; $nom a passé un bon moment.&lt;&lt;/if&gt;&gt;
 
@@ -961,7 +971,7 @@ $a
 Sang-Froid
 $n&lt;/center&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="StoryInit" tags="" position="2350,300" size="100,100">&lt;&lt;nobr&gt;&gt;
-
+&lt;&lt;cacheaudio &quot;fond&quot; &quot;https://audionautix.com/Music/CodeBlue.mp3&quot; &gt;&gt;
 &lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
 &lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
 
@@ -1027,7 +1037,7 @@ $nom a réussi à terminer ses études avec un diplome de niveau &lt;&lt;print $
 $nom entamme ainsi sa vie professionnelle avec une estime de soi à $CurES /20.
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/type&gt;&gt;
-
+&lt;div style=&quot;text-align: right;&quot;&gt;[[à propos]]&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="50" name="Validation Personnage" tags="" position="2325,875" size="100,100">RECAPITULATIF :
 &lt;img @src= &quot;$portrait&quot;&gt;
 Tu prendras les décisions pour $nom, &lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt; une fille &lt;&lt;else&gt;&gt; un garçon &lt;&lt;/if&gt;&gt; qui a ces traits de personnalité : 
@@ -1057,7 +1067,7 @@ Sang-Froid
 	Tu dois répartir maximum 15 points dans ta personnalité ! : [[Recommencer-&gt;Personnalisé]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $persostat = false&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="musée" tags="" position="1900,1125" size="100,100">&lt;img src=&quot;https://i.ibb.co/yVY6n90/stable-diffusion-xl-9-clipdrop-remove-text.jpg&quot;&gt;
-&lt;&lt;audio &quot;culture&quot; play loop&gt;&gt;
+&lt;&lt;audio &quot;culture&quot; play loop&gt;&gt;&lt;&lt;audio &quot;fond&quot; pause&gt;&gt;
 $nom se trouve actuellement dans un musée qui déborde de savoir et d&#39;intellect, où chaque coin et recoin résonne d&#39;opportunités d&#39;apprentissage. Les œuvres d&#39;art exposées, les expositions interactives et les énigmes à résoudre l&#39;entourent, créant une atmosphère dense et intellectuellement stimulante. 
 &lt;&lt;if $o &gt;3&gt;&gt; $nom se nourrit l&#39;esprit grace à la culture. $nom gagne &lt;&lt;print $o-3&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES +=$o-3&gt;&gt;&lt;&lt;elseif $o &lt;3&gt;&gt; $nom n&#39;apprécie pas de se prendre la tête avec de l&#39;art qui ne sert à rien. $nom perd &lt;&lt;print 3-$o&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES -=3-$o&gt;&gt;&lt;&lt;else&gt;&gt; $nom a passé un bon moment.&lt;&lt;/if&gt;&gt;
 
@@ -1067,33 +1077,14 @@ $nom se trouve actuellement dans un musée qui déborde de savoir et d&#39;intel
 &lt;/a&gt;
 &lt;/center&gt;
 &lt;span style=&quot;color:green ; background-color: black&quot;&gt;
-//Cette application a été créée par des psychologues de l&#39;Éducation Nationale. Elle s&#39;inspire des relations entre les intérêts, la personnalité, les formations, leur contexte, et les métiers. Pour les élèves, l&#39;objectif est de prendre en compte comment les filières correspondent à leur façon de faire les choses et comment elles correspondent à qui ils sont en tant qu&#39;individus. En d&#39;autres termes, il s&#39;agit de réfléchir à la compatibilité entre leurs styles personnels et les choix d&#39;orientation.
+//Cette application a été créée par des psychologues de l&#39;Éducation Nationale. Elle s&#39;inspire des relations entre les intérêts, la personnalité, les formations, leur contexte, et les métiers. Pour les élèves, l&#39;objectif est de prendre en compte comment les filières correspondent à leur façon de faire les choses et comment elles correspondent à qui ils sont en tant qu&#39;individus. En d&#39;autres termes, il s&#39;agit de réfléchir à la compatibilité entre leurs styles personnels et les choix d&#39;orientation. En effet, la personnalité en accord avec le style d&#39;apprentissage, expliquent à eux seuls 17% des résultats scolaires &lt;a href=&quot;https://www.sciencedirect.com/science/article/abs/pii/S0191886911002194&quot;&gt;//(Kommaraju &amp; al., 2011)//&lt;/a&gt;.
+&lt;center&gt;&lt;img src=&quot;https://i.ibb.co/CVy6zPL/7574d0f7-8b70-41a9-ba4d-b3df17066b49.jpg&quot; alt=&quot;7574d0f7-8b70-41a9-ba4d-b3df17066b49&quot; border=&quot;0&quot;&gt;&lt;/center&gt;
+/!\ Attention à la tentation de l&#39;autodiagnostique en ligne. L&#39;humain est très sensible &lt;a href=&quot;https://fr.wikipedia.org/wiki/Biais_d%27attribution#Types&quot;&gt;//aux biais d&#39;attribution//&lt;/a&gt; et à l&#39;effet &lt;a href=&quot;https://fr.wikipedia.org/wiki/Effet_Barnum&quot;&gt;//Barnum//&lt;/a&gt;. Lire des descriptions et s&#39;y identifier n&#39;est donc pas fiable et présente des risques. Les tests en ligne ne le sont pas forcément plus. Par exemple, le &lt;a href=&quot;https://www.psychologytoday.com/intl/blog/give-and-take/201309/goodbye-to-mbti-the-fad-that-wont-die&quot;&gt;//MBTI//&lt;/a&gt;  et &lt;a href=&quot;https://www.inverse.com/mind-body/enneagram-personality-test-experts-explain&quot;&gt;//l&#39;Enneagrame//&lt;/a&gt;, n&#39;ont aucune validité scientifique et aucun pouvoir prédictif. Pour faire simple, ils ne valent pas mieux que l&#39;horoscope du journal. Ne pas utiliser de bons outils revient à deviner son apparence uniquement en se palpant le visage avec les doigts dans des mouffles. Il est donc préférable de faire appel à un psychologue comme le PsyEN de l&#39;établissement ou à l&#39;un du CIO.
 
 Cependant, il est important de noter que cette application n&#39;a pas pour but de prédire les orientations futures, les réussites ou les échecs. Bien qu&#39;elle aspire à sensibiliser les élèves au fait que l&#39;orientation ne se limite pas aux résultats scolaires, elle simplifie beaucoup la réalité et se base sur des stéréotypes qui ne représentent pas la diversité des personnes, des possibilités d&#39;orientation et de l&#39;ensemble des résultats possibles de ces combinaisons.//
 &lt;/span&gt;
 
-&lt;&lt;click &quot;Nouvelle Partie&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UISystem.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;
-&lt;a onclick=&quot;location.reload()&quot; class=&quot;internalLink&quot;&gt;Nouvelle Partie&lt;/a&gt;
-
-[[Recommencer|Bienvenue][state.restart()]]
-
-Donner une note de 0 à 20 : &lt;&lt;numberbox &quot;$note&quot; 0&gt;&gt;&lt;div id=&quot;notestatus&quot;&gt;&lt;/div&gt;
-&lt;div id = &quot;Confirmation&quot;&gt;
-    &lt;&lt;link &quot;Envoyer mon score&quot;&gt;&gt;
-        &lt;&lt;set _statut = true&gt;&gt;
-          &lt;&lt;if $note&gt;20&gt;&gt; 
-              &lt;&lt;replace &quot;#notestatus&quot;&gt;&gt;&lt;span class=&quot;non&quot;&gt;Veuillez donner une note entre 0 et 20&lt;/span&gt;&lt;&lt;/replace&gt;&gt;
-              &lt;&lt;set _statut = false&gt;&gt;
-           &lt;&lt;/if&gt;&gt;
-            &lt;&lt;if $note&gt;=0 and $note&lt;=20&gt;&gt; 
-              &lt;&lt;replace &quot;#notestatus&quot;&gt;&gt;&lt;span class=&quot;ok&quot;&gt;Merci&lt;/span&gt;&lt;&lt;/replace&gt;&gt;
-              &lt;&lt;set _statut = true&gt;&gt;
-           &lt;&lt;/if&gt;&gt;
-           &lt;&lt;if _statut is true&gt;&gt;
-                &lt;&lt;replace &quot;#confirmation&quot;&gt;&gt;&lt;span class=&quot;ok&quot;&gt;Information envoyée.&lt;/span&gt;&lt;&lt;/replace&gt;&gt;
-           &lt;&lt;/if&gt;&gt;
-     &lt;&lt;/link&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="Test" tags="" position="2750,500" size="100,100">&lt;button onclick=&quot;exportData()&quot;&gt;Exporter les données&lt;/button&gt;
+Pour refaire une partie, utilisez le bouton Restart dans le bandeau à gauche</tw-passagedata><tw-passagedata pid="53" name="Test" tags="" position="2800,475" size="100,100">&lt;button onclick=&quot;exportData()&quot;&gt;Exporter les données&lt;/button&gt;
 
 &lt;script&gt;
   function exportData() {
@@ -1113,7 +1104,31 @@ Donner une note de 0 à 20 : &lt;&lt;numberbox &quot;$note&quot; 0&gt;&gt;&lt;di
       });
 	}
 &lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="54" name="Test John Steward" tags="" position="2725,625" size="100,100">&lt;&lt;set _CurDate = &quot;Yolo&quot;&gt;&gt;
+
+&lt;&lt;click &quot;Nouvelle Partie&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UISystem.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;
+&lt;a onclick=&quot;location.reload()&quot; class=&quot;internalLink&quot;&gt;Nouvelle Partie&lt;/a&gt;
+
+
+
+[[Recommencer|Bienvenue][state.restart()]]
+
+Donner une note de 0 à 20 : &lt;&lt;numberbox &quot;$note&quot; 0&gt;&gt;&lt;div id=&quot;notestatus&quot;&gt;&lt;/div&gt;
+&lt;div id = &quot;Confirmation&quot;&gt;
+    &lt;&lt;link &quot;Envoyer mon score&quot;&gt;&gt;
+        &lt;&lt;set _statut = true&gt;&gt;
+          &lt;&lt;if $note&gt;20&gt;&gt; 
+              &lt;&lt;replace &quot;#notestatus&quot;&gt;&gt;&lt;span class=&quot;non&quot;&gt;Veuillez donner une note entre 0 et 20&lt;/span&gt;&lt;&lt;/replace&gt;&gt;
+              &lt;&lt;set _statut = false&gt;&gt;
+           &lt;&lt;/if&gt;&gt;
+            &lt;&lt;if $note&gt;=0 and $note&lt;=20&gt;&gt; 
+              &lt;&lt;replace &quot;#notestatus&quot;&gt;&gt;&lt;span class=&quot;ok&quot;&gt;Merci&lt;/span&gt;&lt;&lt;/replace&gt;&gt;
+              &lt;&lt;set _statut = true&gt;&gt;
+           &lt;&lt;/if&gt;&gt;
+           &lt;&lt;if _statut is true&gt;&gt;
+                &lt;&lt;replace &quot;#confirmation&quot;&gt;&gt;&lt;span class=&quot;ok&quot;&gt;Information envoyée.&lt;/span&gt;&lt;&lt;/replace&gt;&gt;
+           &lt;&lt;/if&gt;&gt;
+     &lt;&lt;/link&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="Test John Steward" tags="" position="2725,625" size="100,100">&lt;&lt;set _CurDate = &quot;Yolo&quot;&gt;&gt;
 &lt;&lt;set data = {nom: $nom, score: $CurEs }&gt;&gt;
 
 &lt;script&gt;
