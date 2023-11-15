@@ -205,7 +205,11 @@ $nom va devoir choisir ses enseignements de spécialité avant de commencer la f
             [[SES, HGGSP, Math-&gt;Economique]]&lt;/th&gt;
 		&lt;/tr&gt;
 	&lt;/table&gt;
- &lt;/center&gt;</tw-passagedata><tw-passagedata pid="2" name="1ere T" tags="" position="2325,1350" size="100,100">Quelle première techno ?
+ &lt;/center&gt;</tw-passagedata><tw-passagedata pid="2" name="1ere T" tags="" position="2325,1350" size="100,100">$nom a pris une décision importante pour son avenir académique en optant pour une filière technologique qui met l&#39;accent sur l&#39;apprentissage inductif, les exercices pratiques et l&#39;expérimentation. Cette voie d&#39;enseignement promet de développer chez $nom une approche analytique et une compréhension profonde des concepts par le biais de la découverte personnelle.
+
+Les enseignements basés sur l&#39;apprentissage inductif peuvent être exigeants, mais ils offrent des opportunités uniques pour $nom d&#39;acquérir des compétences essentielles tout en développant sa pensée critique. 
+
+Quelle première technologique va choisir $nom ?
 
 &lt;center&gt;
   &lt;table style=&#39;width: 100%;&#39;&gt;
@@ -298,8 +302,39 @@ Le BTS (Brevet de Technicien Supérieur) est une formation de deux ans qui se co
 
 Le BTS est connu pour préparer les étudiants à des carrières spécifiques, en leur fournissant des compétences pratiques et des connaissances professionnelles approfondies. La décision de poursuivre un BTS aura un impact significatif sur le futur de $nom, car elle le/la dirigera vers un domaine professionnel particulier. 
 
+&lt;&lt;nobr&gt;&gt;
+ &lt;&lt;if $Interet==0&gt;&gt; 
+      &lt;&lt;if  $o &lt;=2&gt;&gt; $nom est peu ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se sent parfaitement à l&#39;aise dans cette formation qui demande d&#39;appliquer des protocôles. $nom termine en gagnant &lt;&lt;print 6-$o&gt;&gt; point d&#39;ES.&lt;&lt;set $CurES +=6-$o&gt;&gt; &lt;&lt;elseif  $o &gt;=4&gt;&gt; $nom est ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se mal à l&#39;aise dans cette formation qui demande d&#39;appliquer des protocôles. $nom termine en perdant $o point d&#39;ES.&lt;&lt;set $CurES -=$o&gt;&gt;&lt;&lt;/if&gt;&gt;
+      &lt;&lt;if  $e &lt;=2&gt;&gt; $nom est introverti&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se sent parfaitement à l&#39;aise dans cette formation qui demande de travailler la technique en indépendance. $nom termine en gagnant &lt;&lt;print 6-$e&gt;&gt; point d&#39;ES.&lt;&lt;set $CurES +=6-$e&gt;&gt;&lt;&lt;elseif  $e &gt;=4&gt;&gt; $nom est extraverti&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se sent mal à l&#39;aise dans cette formation qui demande de travailler la technique en indépendance. $nom termine en perdant $e point d&#39;ES.&lt;&lt;set $CurES -=$e&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;if $Interet==1&gt;&gt;
+    &lt;&lt;if  $o &gt;=4&gt;&gt; $nom est très ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se sent parfaitement à l&#39;aise dans cette formation qui demande de remettre en cause ses connaissances pour les appronfondire davantage. $nom termine en gagnant $o point d&#39;ES.&lt;&lt;set $CurES +=$o&gt;&gt; &lt;&lt;elseif  $o &lt;=2&gt;&gt; $nom est peu ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se sent mal à l&#39;aise dans cette formation qui demande de remettre en cause ses connaissances et ses habitudes. $nom termine en perdant &lt;&lt;print 6-$o&gt;&gt; point d&#39;ES.&lt;&lt;set $CurES -=6-$o&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;if $Interet==2&gt;&gt; 
+    &lt;&lt;if  $o &gt;=4&gt;&gt; $nom est très ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se sent parfaitement à l&#39;aise dans cette formation qui demande de la créativité. $nom termine en gagnant $o point d&#39;ES.&lt;&lt;set $CurES +=$o&gt;&gt;&lt;&lt;elseif  $o &lt;=2&gt;&gt; $nom est très peu ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se sent mal à l&#39;aise dans cette formation qui demande de la créativité. $nom termine en perdant &lt;&lt;print 6-$o&gt;&gt; point d&#39;ES.&lt;&lt;set $CurES -=--$o&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;if $Interet==3&gt;&gt;
+    &lt;&lt;if  $o &gt;=4&gt;&gt; $nom est très ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; et se sent parfaitement à l&#39;aise dans cette formation qui demande d&#39;accompagner sans jugement les personnes pour les aider à se comprendre. $nom termine en gagnant $o point d&#39;ES.&lt;&lt;set $CurES +=$o&gt;&gt;&lt;&lt;elseif  $o &lt;=2&gt;&gt; $nom est peu ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; et se sent mal à l&#39;aise dans cette formation qui demande d&#39;accompagner sans jugement les personnes pour les aider à se comprendre. $nom termine en perdant &lt;&lt;print 6-$o&gt;&gt; point d&#39;ES.&lt;&lt;set $CurES -=6-$o&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if  $a &gt;=4&gt;&gt; $nom est très gentil&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;le&lt;&lt;/if&gt;&gt;   et se sent parfaitement à l&#39;aise dans cette formation qui demande de faire preuve d&#39;empathie. $nom termine en gagnant $a point d&#39;ES.&lt;&lt;set $CurES +=$a&gt;&gt;&lt;&lt;elseif  $a &lt;=2&gt;&gt; $nom est froid&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;le&lt;&lt;/if&gt;&gt; et ne se sent pas à sa place danscette formation qui demande de faire preuve d&#39;empathie. $nom termine en perdant &lt;&lt;print 6-$a&gt;&gt; point d&#39;ES.&lt;&lt;set $CurES -=6-$a&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;if $Interet==4&gt;&gt; 
+    &lt;&lt;if  $e &gt;=4&gt;&gt; $nom est très extravertie et se sent parfaitement à l&#39;aise dans cette formation qui demande d&#39;aller vers les gens et de les convaincre. $nom termine en gagnant $e points d&#39;ES.&lt;&lt;set $CurES +=$e&gt;&gt;&lt;&lt;elseif  $e&lt;=2&gt;&gt; $nom est très introvertie et se sent mal à l&#39;aise dans cette formation qui demande d&#39;aller vers les gens et de les convaincre. $nom termine en perdant &lt;&lt;print 6-$e&gt;&gt; points d&#39;ES.&lt;&lt;set $CurES -=6-$e&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;if $Interet==5&gt;&gt;
+    &lt;&lt;if  $c &gt;=4&gt;&gt; $nom est très méthodique et se sent parfaitement à l&#39;aise dans cette formation qui demande de l&#39;organisation. $nom termine en gagnant $c points d&#39;ES.&lt;&lt;set $CurES +=$c&gt;&gt;&lt;&lt;elseif  $c &lt;=2&gt;&gt; $nom est peu méthodique et se sent mal à l&#39;aise dans cette formation qui demande de l&#39;organisation. $nom perd &lt;&lt;print 6-$c&gt;&gt; points d&#39;ES.&lt;&lt;set $CurES -=6-$c&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if  $o &lt;=2&gt;&gt; $nom a peu d&#39;ouverture et se sent parfaitement à l&#39;aise dans cette formation qui demande de l&#39;aisance avec la familiarité. $nom termine en gagnant &lt;&lt;print 6-$o&gt;&gt; points d&#39;ES.&lt;&lt;set $CurES +=6-$o&gt;&gt;&lt;&lt;elseif  $o &gt;=4&gt;&gt; $nom a beaucoup d&#39;ouverture et se sent mal à l&#39;aise dans cette formation qui demande de l&#39;aisance avec la familiarité. $nom termine en perdant $o points d&#39;ES.&lt;&lt;set $CurES -=$o&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+
+
 Que va faire $nom ensuite ?
-&lt;&lt;if $CurES &gt;=8&gt;&gt;
+&lt;&lt;if $CurES &gt;=10&gt;&gt;
   &lt;&lt;if $coeur &lt;1 and random(1, 5) &lt;= $e&gt;&gt;
     	&lt;&lt;link [[Licence universitaire-&gt;Rencontre en stage]]&gt;&gt;&lt;&lt;set $passage =&quot;Licence universitaire&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
    		 &lt;&lt;link [[Ecole-&gt;Rencontre en stage]]&gt;&gt;&lt;&lt;set $passage =&quot;Ecole&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -347,7 +382,7 @@ Continuer les études
     &lt;&lt;if  $o &gt;=4&gt;&gt; $nom est très ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se sent parfaitement à l&#39;aise dans cette formation qui demande de la créativité. $nom termine en gagnant $o point d&#39;ES.&lt;&lt;set $CurES +=$o&gt;&gt;&lt;&lt;elseif  $o &lt;=2&gt;&gt; $nom est très peu ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt;  et se sent mal à l&#39;aise dans cette formation qui demande de la créativité. $nom termine en perdant &lt;&lt;print 6-$o&gt;&gt; point d&#39;ES.&lt;&lt;set $CurES -=--$o&gt;&gt;&lt;&lt;/if&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 
-    &lt;&lt;if $Interet==3&gt;&gt; $nom s&#39;insère dans la vie active comme $Riasecfin[$Interet][$diplome].
+    &lt;&lt;if $Interet==3&gt;&gt; 
     &lt;&lt;if  $o &gt;=4&gt;&gt; $nom est très ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; et se sent parfaitement à l&#39;aise dans cette formation qui demande d&#39;accompagner sans jugement les personnes pour les aider à se comprendre. $nom termine en gagnant $o point d&#39;ES.&lt;&lt;set $CurES +=$o&gt;&gt;&lt;&lt;elseif  $o &lt;=2&gt;&gt; $nom est peu ouvert&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; et se sent mal à l&#39;aise dans cette formation qui demande d&#39;accompagner sans jugement les personnes pour les aider à se comprendre. $nom termine en perdant &lt;&lt;print 6-$o&gt;&gt; point d&#39;ES.&lt;&lt;set $CurES -=6-$o&gt;&gt;&lt;&lt;/if&gt;&gt;
     &lt;&lt;if  $a &gt;=4&gt;&gt; $nom est très gentil&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;le&lt;&lt;/if&gt;&gt;   et se sent parfaitement à l&#39;aise dans cette formation qui demande de faire preuve d&#39;empathie. $nom termine en gagnant $a point d&#39;ES.&lt;&lt;set $CurES +=$a&gt;&gt;&lt;&lt;elseif  $a &lt;=2&gt;&gt; $nom est froid&lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt;le&lt;&lt;/if&gt;&gt; et ne se sent pas à sa place danscette formation qui demande de faire preuve d&#39;empathie. $nom termine en perdant &lt;&lt;print 6-$a&gt;&gt; point d&#39;ES.&lt;&lt;set $CurES -=6-$a&gt;&gt;&lt;&lt;/if&gt;&gt;
     &lt;&lt;/if&gt;&gt;
@@ -425,7 +460,7 @@ Avant de commencer l&#39;aventure, choisis le collégien que tu accompagneras to
 &lt;div style=&quot;text-align: right;&quot;&gt;[[à propos]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="C&#39;est parti !" tags="3e" position="2550,925" size="100,100">&lt;&lt;set $persostat = true&gt;&gt;&lt;&lt;set $passage = &quot;C&#39;est parti !&quot;&gt;&gt;
 Tu va aider  &#39;&#39;$nom&#39;&#39;, &lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt; une &lt;&lt;else&gt;&gt; un &lt;&lt;/if&gt;&gt;élève en 3e, à s&#39;orienter. Tu trouveras les informations  &lt;&lt;if $genre is &quot;Fille&quot;&gt;&gt; la &lt;&lt;else&gt;&gt; le &lt;&lt;/if&gt;&gt; concernant sur la gauche.
 
-$nom se considère dans la moyenne des élèves de ta classe, c&#39;est pour cela que que son Estime de Soi est moyenne pour l&#39;instant : $nom a $CurES/20 points d&#39;ES. 
+$nom se considère dans la moyenne des élèves de sa classe, c&#39;est pour cela que que son Estime de Soi est moyenne pour l&#39;instant : $nom a $CurES/20 points d&#39;ES. 
 
 Ton objectif est d&#39;aider $nom à s&#39;épanouir en faisant des choix qui lui correspondent.
 
@@ -433,7 +468,7 @@ Ton objectif est d&#39;aider $nom à s&#39;épanouir en faisant des choix qui lu
   // $nom peut trouver des informations pour l&#39;aider à définir la voie qui lui correspond
   &lt;&lt;link [[Voir le PsyEN-&gt;PsyEN]]&gt;&gt; &lt;&lt;set $passage = &quot;Collège&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
   &lt;&lt;link [[Voir globalement les formations-&gt;Salon]]&gt;&gt; &lt;&lt;set $passage = &quot;Collège&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link [[Voir une formation préçisément grace à Passpro-&gt;Portes Ouvertes]]&gt;&gt; &lt;&lt;set $passage = &quot;Collège&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+  &lt;&lt;link [[Voir une formation préçisément grâce à Passpro-&gt;Portes Ouvertes]]&gt;&gt; &lt;&lt;set $passage = &quot;Collège&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
   &lt;&lt;link [[Découvrir les formations en ligne-&gt;Onisep]]&gt;&gt; &lt;&lt;set $passage = &quot;Collège&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
   $nom peut aussi repousser la question de l&#39;orientation
 &lt;&lt;/if&gt;&gt;
@@ -540,19 +575,17 @@ Continuer les études
 	&lt;&lt;/if&gt;&gt;	
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;link [[Travailler]]&gt;&gt;&lt;&lt;set $diplome=3&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Doctorat" tags="" position="1950,2025" size="100,100">&lt;&lt;link [[Travailler]]&gt;&gt;&lt;&lt;set $diplome=5&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Ecole" tags="" position="2025,1900" size="100,100">&lt;img src=&quot;https://i.ibb.co/K0JBmcL/comfyui-clora-sketch-00030.png&quot; alt=&quot;comfyui-clora-sketch-00030&quot; border=&quot;0&quot;&gt;
+&lt;&lt;link [[Travailler]]&gt;&gt;&lt;&lt;set $diplome=3&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Doctorat" tags="" position="1950,2025" size="100,100">&lt;&lt;link [[Travailler]]&gt;&gt;&lt;&lt;set $diplome=5&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Ecole" tags="" position="2125,1925" size="100,100">&lt;img src=&quot;https://i.ibb.co/K0JBmcL/comfyui-clora-sketch-00030.png&quot; alt=&quot;comfyui-clora-sketch-00030&quot; border=&quot;0&quot;&gt;
 $nom fait une école &lt;&lt;if $Interet &lt;=1&gt;&gt;d ingénieur&lt;&lt;elseif $Interet == 2&gt;&gt;d arts &lt;&lt;else&gt;&gt; de commerce&lt;&lt;/if&gt;&gt;.
 &lt;&lt;if lastVisited(&quot;Parcoursup&quot;)==1&gt;&gt; $nom est rentrée en école directement après le bac et a du contracter un crédit étudiant pour les frais de scolarité car peu d&#39;écoles font de l&#39;alternance dès le début. Cela ajoute une angoisse à $nom qui perd 1 point d&#39;ES. &lt;&lt;set $CurES -=1&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if not $Interet == 3 &gt;&gt;
-    &lt;&lt;if $a &gt; 3 &gt;&gt; $nom aime la coopération et l&#39;entraide et se sent mal à l&#39;aise à l&#39;idée que son école le pistonne pour gagner mieux. $nom perd &lt;&lt;print $a-3&gt;&gt; points d&#39;ES&lt;&lt;set $CurES -=$a-3&gt;&gt;&lt;&lt;elseif $a &lt;3 &gt;&gt; $nom apprécie la concurence et être avantagé&lt;&lt;if $genre == &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; grace à son école sur le marché de l&#39;emploi.  $nom gagne &lt;&lt;print 3-$a&gt;&gt; points d&#39;ES&lt;&lt;set $CurES +=3-$a&gt;&gt;&lt;&lt;/if&gt;&gt; 
+    &lt;&lt;if $a &gt; 3 &gt;&gt; $nom aime la coopération et l&#39;entraide et se sent mal à l&#39;aise dans l&#39;esprit de compétition et à l&#39;idée que son école utilise son réseau pour l&#39;avantager. $nom perd &lt;&lt;print $a-3&gt;&gt; points d&#39;ES&lt;&lt;set $CurES -=$a-3&gt;&gt;&lt;&lt;elseif $a &lt;3 &gt;&gt; $nom apprécie la concurence et être avantagé&lt;&lt;if $genre == &quot;Fille&quot;&gt;&gt;e&lt;&lt;/if&gt;&gt; grace à son école sur le marché de l&#39;emploi.  $nom gagne &lt;&lt;print 3-$a&gt;&gt; points d&#39;ES&lt;&lt;set $CurES +=3-$a&gt;&gt;&lt;&lt;/if&gt;&gt; 
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;link [[Travailler]]&gt;&gt;&lt;&lt;set $diplome=4&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-&lt;&lt;if $CurES &gt;=12&gt;&gt;
-[[Doctorat]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Economique" tags="Bac" position="1875,1525" size="100,100">&lt;img src=&quot;https://i.ibb.co/xmbhrJJ/Comfy-UI-00202.png&quot; alt=&quot;Eco&quot; border=&quot;0&quot;&gt;
+&lt;&lt;if $CurES &gt;=12&gt;&gt; $nom a un dossier très correct à la fin de son master et peut, selon son souhait, continuer les études en faisant une thèse : [[Doctorat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Economique" tags="Bac" position="1875,1525" size="100,100">&lt;img src=&quot;https://i.ibb.co/xmbhrJJ/Comfy-UI-00202.png&quot; alt=&quot;Eco&quot; border=&quot;0&quot;&gt;
 $nom a fait un choix intellectuellement stimulant en optant pour une filière teintée économique au lycée. Cette filière exigeante se concentre sur les sciences sociales, l&#39;économie, l&#39;histoire et la politique, offrant une perspective multidisciplinaire sur les questions qui façonnent notre société.
 
 Le programme de cette filière plonge $nom dans l&#39;étude des mécanismes économiques, des systèmes politiques, de l&#39;histoire et des forces qui influencent notre monde. C&#39;est une voie qui pousse $nom à réfléchir de manière critique sur les questions sociales, à comprendre les dynamiques économiques et politiques, et à explorer les racines historiques de notre société.
@@ -638,8 +671,15 @@ Quel domaine souhaite étudier $nom dans les études supérieures ?
 &lt;&lt;link [[Artistique-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 2&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[Social-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 3&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[Commercial-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 4&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[Organisationnel-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 5&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Master" tags="" position="2400,1900" size="100,100">&lt;&lt;link [[Travailler]]&gt;&gt;&lt;&lt;set $diplome=4&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;if $CurES &gt;=12&gt;&gt;[[Doctorat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Onisep" tags="aide" position="2975,875" size="100,100">&lt;center&gt;
+&lt;&lt;link [[Organisationnel-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 5&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Master" tags="" position="2400,1900" size="100,100"> Le Master est une étape académique avancée en deux ans après un bac +3 qui offre la possibilité de se spécialiser davantage dans un domaine d&#39;études particulier.
+
+Les Masters sont réputés pour approfondir les connaissances et compétences ce qui offrira à $nom, la préparationi à des postes plus exigeants et à des opportunités professionnelles diverses. Contrairement aux licences, les masters ont un enseignement théorique mais aussi professionnel.
+
+&lt;&lt;if $c &gt; 3 &gt;&gt; $nom est méthodique et s&#39;en sort bien dans l&#39;exigence avancée du master, tant sur la partie enseignements que sur les stages et mémoires. $nom gagne &lt;&lt;print $c-3&gt;&gt; points d&#39;ES &lt;&lt;set $CurES +=$c-3&gt;&gt;&lt;&lt;elseif $c &lt;3 &gt;&gt; $nom est peu méthodique et a du mal à jongler avec l&#39;exigence avancée du maste, tant sur la partie enseignements que sur les stages et mémoires. $nom  perd &lt;&lt;print 3-$c&gt;&gt; points d&#39;ES&lt;&lt;set $CurES -=3-$c&gt;&gt;&lt;&lt;/if&gt;&gt; 
+
+&lt;&lt;link [[Travailler]]&gt;&gt;&lt;&lt;set $diplome=4&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;if $CurES &gt;=12&gt;&gt;
+$nom a un dossier très correct à la fin de son master et peut, selon son souhait, continuer les études en faisant une thèse : [[Doctorat]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Onisep" tags="aide" position="2975,875" size="100,100">&lt;center&gt;
 &lt;img src=&quot;https://www.onisep.fr/assets/dso/images/onisep/logo.svg&quot; alt=&quot;Image indisponible, vérifiez la connexion internet&quot; border=&quot;0&quot;&gt;
 &lt;/center&gt;
 
@@ -788,9 +828,9 @@ Choisis l&#39;apparence de ton personnage :
 &lt;&lt;set $persostat = false&gt;&gt;   </tw-passagedata><tw-passagedata pid="30" name="Personnalité" tags="psyen" position="3150,1100" size="100,100">&lt;span style=&quot;background:black&quot; &gt;
 Bonjour $nom !
 
-La personnalité est un ensemble de dispositions, de traits, stables de l&#39;individus. Si elle évolue dans le temps et se fige vers la vingtaine, elle est globalement ancrée chez les personnes et peut même se voir au niveau du 
-&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3049165/&quot;&gt; 
-//cerveau//&lt;/a&gt; par exemple !
+La personnalité est un ensemble de dispositions, de traits, stables de l&#39;individus. Si elle évolue dans le temps et se fige vers la vingtaine, elle est globalement ancrée chez les personnes, &lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/8776880/&quot;&gt; 
+//elle est pour moitiée définie par l&#39;hérédité et à moitié par l&#39;environnement//&lt;/a&gt; et peut même se voir au niveau du 
+&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3049165/&quot;&gt; //cerveau//&lt;/a&gt; par exemple !
 Le modèle des Big Five est une façon parmi les plus fiables de comprendre la personnalité des gens en utilisant cinq grands traits. Imagine que ces traits sont comme les grandes catégories qui décrivent la personnalité de quelqu&#39;un. Les cinq traits sont les suivants :
 
 1. L&#39;Extraversion : Cela concerne si vous êtes une personne plutôt sociable et extravertie, qui aime passer du temps avec les autres, ou si vous êtes plutôt introverti, préférant être seul ou avec un petit groupe d&#39;amis proches.
@@ -820,9 +860,12 @@ $nom ne sait pas vraiment ce qu&#39;&lt;&lt;if $genre is &quot;Fille&quot;&gt;&g
 
 Quelle formation interesse $nom ?
 &lt;&lt;radiobutton &quot;$Interet&quot;  0 checked &gt;&gt; $RIASECbac[0]
-&lt;&lt;radiobutton &quot;$Interet&quot;  1 &gt;&gt; $RIASECbac[1]
+&lt;&lt;if hasVisited(&quot;Salon&quot;)&gt;&gt;
+Lors de ta visite au salon, $nom a découvert cette formation et peut la demander :
+	&lt;&lt;radiobutton &quot;$Interet&quot;  1 &gt;&gt; $RIASECbac[1]
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;if hasVisited(&quot;Portes Ouvertes&quot;)&gt;&gt;
-Grace à ton stage passpro, tu as assez de points pour faire cette formation :
+Grace à son stage passpro, $nom a assez de points pour faire cette formation :
 	&lt;&lt;radiobutton &quot;$Interet&quot; 2 &gt;&gt; $RIASECbac[2]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;radiobutton &quot;$Interet&quot;  3 &gt;&gt; $RIASECbac[3]
@@ -939,7 +982,7 @@ Quel domaine souhaite étudier $nom dans les études supérieures ?
 &lt;&lt;link [[Social-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 3&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[Commercial-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 4&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[Organisationnel-&gt;Parcoursup]]&gt;&gt; &lt;&lt;set $Interet = 5&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Sortir" tags="" position="2000,1000" size="100,100">&lt;img src=&quot;https://i.ibb.co/XZM1tFh/stable-diffusion-xl-5.jpg&quot;&gt;
-&lt;&lt;audio &quot;sortie&quot;play loop&gt;&gt; &lt;&lt;audio &quot;fond&quot; pause&gt;&gt;
+&lt;&lt;audio &quot;sortie&quot; play loop&gt;&gt; &lt;&lt;audio &quot;fond&quot; pause&gt;&gt;
 Aujourd&#39;hui, $nom passe du temps avec ses amis, sillonnant les rues animées de la ville et les paisibles parcs verdoyants. L&#39;occasion parfaite pour des conversations enrichissantes, des échanges d&#39;idées et des moments de détente entre amis. Chacune de ces rencontres offre à $nom la possibilité de renforcer ses liens sociaux et de s&#39;enrichir de nouvelles perspectives.
 &lt;&lt;if $a &gt;=4&gt;&gt; $nom à l&#39;occasion de discuter de manière sereine avec ses amis grace à sa gentillesse. $nom gagne &lt;&lt;print $a-3&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES +=$a-3&gt;&gt;&lt;&lt;elseif $a &lt;=2&gt;&gt; $nom ne se montre pas toujours agréable avec ses amis et leur sortie se terminent en embrouille. $nom perd &lt;&lt;print 3-$a&gt;&gt; point(s) d&#39;ES. &lt;&lt;set $CurES -=3-$a&gt;&gt;&lt;&lt;else&gt;&gt; $nom a passé un bon moment.&lt;&lt;/if&gt;&gt;
 
